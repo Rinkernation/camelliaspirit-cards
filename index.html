@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>椿の精 カード帳</title>
+<meta name="description" content="Slay the Spire 2 のMOD「椿の精」の全カードのイラストと効果。">
+<style>
+/* 飾らないカード一覧。端末の標準フォント、黒地固定（白はユーザーが見づらいと判断）、絵と文字だけ */
+:root{
+  --bg:#161616; --text:#e6e6e6; --sub:#9a9a9a; --line:#2e2e2e; --chip:#232323; --up:#8cc49a; --attack:#d99289; --skill:#93afd4; --power:#b8a0d4;
+  color-scheme:dark;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box}
+html,body{background:var(--bg)}
+html{font-size:125%}
+@media (max-width:480px){html{font-size:106.25%}}
+body{margin:0;color:var(--text);font-family:system-ui,-apple-system,"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;line-height:1.6}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:24px 56px}
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:8px 16px}
+h1{margin:0;font-size:1.5rem}
+.lead{margin:4px 0 0;font-size:.85rem;color:var(--sub)}
+.pages{display:flex;gap:4px;font-size:.85rem}
+.pages a{color:var(--sub);text-decoration:none;padding:2px 10px;border:1px solid var(--line);border-radius:4px}
+.pages a[aria-current="page"]{color:var(--bg);background:var(--text);border-color:var(--text)}
+.up{color:var(--up)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);margin-top:16px;padding-block:10px;border-bottom:1px solid var(--line);
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.tabs{display:flex;flex-wrap:wrap;gap:4px}
+.tabs button{font:inherit;font-size:.85rem;background:var(--chip);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:2px 10px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--text);color:var(--bg);border-color:var(--text)}
+#q{font:inherit;font-size:.85rem;background:var(--bg);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:3px 8px;min-width:0;flex:1 1 160px;max-width:240px}
+.shown{font-size:.8rem;color:var(--sub);margin-left:auto}
+.sec{margin-top:28px}
+.sec h2{margin:0 0 4px;font-size:1.1rem}
+.noart{display:grid;place-items:center;background:var(--chip);color:var(--sub);font-size:.75rem;aspect-ratio:250/190}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.tag{font-size:.8rem;font-weight:600;line-height:1.5;padding:0 8px;border-radius:4px;background:var(--chip);border:1px solid var(--line);color:var(--text)}
+.tag.t-attack{color:var(--attack);border-color:currentColor}.tag.t-skill{color:var(--skill);border-color:currentColor}.tag.t-power{color:var(--power);border-color:currentColor}
+.note{font-size:.78rem;color:var(--sub)}
+.foot{margin-top:40px;font-size:.75rem;color:var(--sub)}
+:focus-visible{outline:2px solid var(--text);outline-offset:2px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px 12px;margin-top:10px}
+.tile{font:inherit;color:inherit;text-align:left;background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile img,.tile .noart{width:100%;height:auto;aspect-ratio:250/190;object-fit:cover;object-position:50% 30%;border-radius:3px;display:block;transition:transform .12s}
+.tile:hover img{transform:scale(1.03)}
+.tname{font-weight:700;font-size:.9rem;line-height:1.35}
+.tile .tag{font-size:.7rem;padding:0 6px}
+@media (max-width:480px){.grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px 8px}}
+@media (prefers-reduced-motion:reduce){.tile img{transition:none}}
+dialog{border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--text);padding:0;width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px)}
+dialog::backdrop{background:rgb(0 0 0/.75)}
+.big{display:flex;flex-direction:column}
+.big img,.big .noart{width:100%;height:auto;aspect-ratio:250/190;display:block}
+.big img.tall{aspect-ratio:606/852;max-height:70vh;width:auto;margin:0 auto}
+.bigbody{padding:14px 18px 18px}
+.big h3{margin:0;font-size:1.3rem}
+.big .meta{margin:6px 0 4px}
+.big .fx{margin:8px 0 0;font-size:1rem}
+.nav{display:flex;gap:6px;justify-content:space-between;padding:0 18px 16px}
+.nav button{font:inherit;font-size:.85rem;background:var(--chip);color:var(--text);border:1px solid var(--line);border-radius:4px;padding:3px 12px;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+  <div><h1>椿の精 カード帳</h1><p class="lead">Slay the Spire 2 MOD v0.0.1・全3枚・2026-11-26 更新</p></div>
+  <nav class="pages" aria-label="ページ"><a href="./" aria-current="page">並べて見る</a><a href="list.html">詳細</a></nav>
+</div>
+<nav class="bar" aria-label="絞り込み">
+  <div class="tabs" id="fr"><button type="button" data-v="all" aria-pressed="true">すべて</button><button type="button" data-v="basic" aria-pressed="false">基本</button><button type="button" data-v="common" aria-pressed="false">コモン</button><button type="button" data-v="uncommon" aria-pressed="false">アンコモン</button><button type="button" data-v="rare" aria-pressed="false">レア</button><button type="button" data-v="ancient" aria-pressed="false">エンシェント</button><button type="button" data-v="status" aria-pressed="false">状態異常</button><button type="button" data-v="token" aria-pressed="false">試し用</button></div>
+  <div class="tabs" id="ft"><button type="button" data-v="all" aria-pressed="true">全種類</button><button type="button" data-v="attack" aria-pressed="false">アタック</button><button type="button" data-v="skill" aria-pressed="false">スキル</button><button type="button" data-v="power" aria-pressed="false">パワー</button></div>
+  <input id="q" type="search" placeholder="名前・効果で探す（例：花びら）" aria-label="名前・効果で探す">
+  <span class="shown" id="shown"></span>
+</nav>
+<section class="sec" data-sec="basic"><h2>基本（2枚）</h2><div class="grid">
+<button type="button" class="card tile" data-rarity="basic" data-type="attack" data-name="ストライク" data-text="6（強化 9）ダメージを与える。" data-i="0">
+  <div class="noart">絵なし</div>
+  <span class="tname">ストライク</span>
+  <span class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></span>
+</button>
+<button type="button" class="card tile" data-rarity="basic" data-type="skill" data-name="防御ぼうぎょ" data-text="5（強化 8）ブロックを得る。" data-i="1">
+  <div class="noart">絵なし</div>
+  <span class="tname">防御</span>
+  <span class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></span>
+</button></div></section><section class="sec" data-sec="token"><h2>試し用（1枚）</h2><div class="grid">
+<button type="button" class="card tile" data-rarity="token" data-type="attack" data-name="落椿おちつばき" data-text="開花中のみ使える。 落椿を起こす（敵全体に10ダメージ）。残りの花びら1枚ごとに、さらに3（強化 4）ダメージ。" data-i="2">
+  <div class="noart">絵なし</div>
+  <span class="tname">落椿</span>
+  <span class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></span>
+</button></div></section>
+<p class="foot">絵が見つからないカード：ストライク、防御、落椿</p>
+</div>
+<dialog id="dlg" aria-label="カードの拡大表示">
+  <div class="big">
+    <img id="dimg" alt="" width="600" height="456">
+    <div class="bigbody"><h3 id="dname"></h3><p class="meta" id="dmeta"></p><p class="fx" id="dfx"></p></div>
+    <div class="nav"><button type="button" id="dprev">← 前</button><button type="button" id="dclose">閉じる</button><button type="button" id="dnext">次 →</button></div>
+  </div>
+</dialog>
+<script>
+var CARDS=[{"name":"ストライク","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"6\u003cspan class=\"up\">（強化 9）\u003c/span>ダメージを与える。","tall":false},{"name":"防御","big":"","meta":"\u003cspan class=\"tag t-skill\">スキル\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"5\u003cspan class=\"up\">（強化 8）\u003c/span>ブロックを得る。","tall":false},{"name":"落椿","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">試し用\u003c/span>","fx":"開花中のみ使える。\u003cbr>落椿を起こす（敵全体に10ダメージ）。残りの花びら1枚ごとに、さらに3\u003cspan class=\"up\">（強化 4）\u003c/span>ダメージ。","tall":false}];
+(function(){
+  var st={r:"all",t:"all",q:""};
+  var cards=[].slice.call(document.querySelectorAll(".card"));
+  var secs=[].slice.call(document.querySelectorAll(".sec"));
+  function apply(){
+    var n=0,q=st.q.trim();
+    cards.forEach(function(c){
+      var ok=(st.r==="all"||c.dataset.rarity===st.r)&&(st.t==="all"||c.dataset.type===st.t)&&(!q||c.dataset.name.indexOf(q)>=0||c.dataset.text.indexOf(q)>=0);
+      c.hidden=!ok; if(ok)n++;
+    });
+    secs.forEach(function(s){s.hidden=!s.querySelector(".card:not([hidden])");});
+    document.getElementById("shown").textContent=n+"枚";
+  }
+  function bind(id,key){
+    var g=document.getElementById(id);
+    g.addEventListener("click",function(e){
+      var b=e.target.closest("button"); if(!b)return;
+      st[key]=b.dataset.v;
+      [].forEach.call(g.querySelectorAll("button"),function(x){x.setAttribute("aria-pressed",x===b?"true":"false");});
+      apply();
+    });
+  }
+  bind("fr","r"); bind("ft","t");
+  document.getElementById("q").addEventListener("input",function(e){st.q=e.target.value;apply();});
+  apply();
+
+  var dlg=document.getElementById("dlg"),cur=-1;
+  function visible(){return cards.filter(function(c){return !c.hidden;});}
+  function show(btn){
+    var d=CARDS[+btn.dataset.i]; cur=visible().indexOf(btn);
+    var im=document.getElementById("dimg"); im.hidden=!d.big; if(d.big)im.src=d.big; im.classList.toggle("tall",!!d.tall);
+    document.getElementById("dname").textContent=d.name;
+    document.getElementById("dmeta").innerHTML=d.meta;
+    document.getElementById("dfx").innerHTML=d.fx;
+    if(!dlg.open)dlg.showModal();
+  }
+  function step(k){var v=visible(); if(!v.length)return; show(v[(cur+k+v.length)%v.length]);}
+  cards.forEach(function(c){c.addEventListener("click",function(){show(c);});});
+  document.getElementById("dprev").addEventListener("click",function(){step(-1);});
+  document.getElementById("dnext").addEventListener("click",function(){step(1);});
+  document.getElementById("dclose").addEventListener("click",function(){dlg.close();});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close();});
+  dlg.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1);});
+})();
+</script>
+</body>
+</html>
