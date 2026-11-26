@@ -58,11 +58,11 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <body>
 <div class="wrap">
 <div class="top">
-  <div><h1>椿の精 カード帳</h1><p class="lead">Slay the Spire 2 MOD v0.0.1・全28枚・2026-11-26 更新</p></div>
+  <div><h1>椿の精 カード帳</h1><p class="lead">Slay the Spire 2 MOD v0.0.1・全41枚・2026-11-26 更新</p></div>
   <nav class="pages" aria-label="ページ"><a href="./">並べて見る</a><a href="list.html" aria-current="page">詳細</a></nav>
 </div>
 <nav class="bar" aria-label="絞り込み">
-  <div class="tabs" id="fr"><button type="button" data-v="all" aria-pressed="true">すべて</button><button type="button" data-v="basic" aria-pressed="false">基本</button><button type="button" data-v="common" aria-pressed="false">コモン</button><button type="button" data-v="uncommon" aria-pressed="false">アンコモン</button><button type="button" data-v="rare" aria-pressed="false">レア</button><button type="button" data-v="ancient" aria-pressed="false">エンシェント</button><button type="button" data-v="status" aria-pressed="false">状態異常</button><button type="button" data-v="token" aria-pressed="false">試し用</button></div>
+  <div class="tabs" id="fr"><button type="button" data-v="all" aria-pressed="true">すべて</button><button type="button" data-v="basic" aria-pressed="false">基本</button><button type="button" data-v="common" aria-pressed="false">コモン</button><button type="button" data-v="uncommon" aria-pressed="false">アンコモン</button><button type="button" data-v="rare" aria-pressed="false">レア</button><button type="button" data-v="ancient" aria-pressed="false">エンシェント</button><button type="button" data-v="nursery" aria-pressed="false">苗床</button><button type="button" data-v="status" aria-pressed="false">状態異常</button><button type="button" data-v="token" aria-pressed="false">試し用</button></div>
   <div class="tabs" id="ft"><button type="button" data-v="all" aria-pressed="true">全種類</button><button type="button" data-v="attack" aria-pressed="false">アタック</button><button type="button" data-v="skill" aria-pressed="false">スキル</button><button type="button" data-v="power" aria-pressed="false">パワー</button></div>
   <input id="q" type="search" placeholder="名前・効果で探す（例：花びら）" aria-label="名前・効果で探す">
   <span class="shown" id="shown"></span>
@@ -83,7 +83,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span><span class="note">初期デッキに5枚</span></p>
     <p class="fx">5<span class="up">（強化 8）</span>ブロックを得る。</p>
   </div>
-</article></div></section><section class="sec" data-sec="common"><h2>コモン（8枚）</h2><div class="list">
+</article></div></section><section class="sec" data-sec="common"><h2>コモン（10枚）</h2><div class="list">
 <article class="card" data-rarity="common" data-type="attack" data-name="花鋏はなばさみ" data-text="9（強化 12）ダメージを与える。">
   <div class="noart">絵なし</div>
   <div class="info">
@@ -147,7 +147,23 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
     <p class="fx">6<span class="up">（強化 8）</span>ブロックを得る。<br>次のターン開始時に4<span class="up">（強化 6）</span>ブロックを得る。</p>
   </div>
-</article></div></section><section class="sec" data-sec="uncommon"><h2>アンコモン（9枚）</h2><div class="list">
+</article>
+<article class="card" data-rarity="common" data-type="skill" data-name="種まきたねまき" data-text="5（強化 8）ブロックを得る。 苗床：椿の苗">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>種まき<span class="yomi">たねまき</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">5<span class="up">（強化 8）</span>ブロックを得る。<br>苗床：椿の苗</p>
+  </div>
+</article>
+<article class="card" data-rarity="common" data-type="attack" data-name="種飛ばしたねとばし" data-text="6（強化 9）ダメージを与える。 苗床：棘の苗">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>種飛ばし<span class="yomi">たねとばし</span></h3>
+    <p class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></p>
+    <p class="fx">6<span class="up">（強化 9）</span>ダメージを与える。<br>苗床：棘の苗</p>
+  </div>
+</article></div></section><section class="sec" data-sec="uncommon"><h2>アンコモン（10枚）</h2><div class="list">
 <article class="card" data-rarity="uncommon" data-type="attack" data-name="満開まんかい" data-text="開花中のみ使える。 4（強化 5）ダメージを2回与える。">
   <div class="noart">絵なし</div>
   <div class="info">
@@ -188,6 +204,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="fx">開花：花びら+2<span class="up">（強化 3）</span>。<br>それ以外：すぐに花びら3<span class="up">（強化 4）</span>枚で開花する。</p>
   </div>
 </article>
+<article class="card" data-rarity="uncommon" data-type="skill" data-name="実り待ちみのりまち" data-text="カードを1（強化 2）枚引く。 苗床：椿の実">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>実り待ち<span class="yomi">みのりまち</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">カードを1<span class="up">（強化 2）</span>枚引く。<br>苗床：椿の実</p>
+  </div>
+</article>
 <article class="card" data-rarity="uncommon" data-type="skill" data-name="棘とげ" data-text="6（強化 8）ブロックを得る。 次のターンまで、攻撃してきた敵に3（強化 5）ダメージを与える。">
   <div class="noart">絵なし</div>
   <div class="info">
@@ -219,7 +243,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 1</span></p>
     <p class="fx">落椿のたび、敵全体に8<span class="up">（強化 11）</span>ダメージを与える。</p>
   </div>
-</article></div></section><section class="sec" data-sec="rare"><h2>レア（9枚）</h2><div class="list">
+</article></div></section><section class="sec" data-sec="rare"><h2>レア（10枚）</h2><div class="list">
 <article class="card" data-rarity="rare" data-type="attack" data-name="首落としくびおとし" data-text="20（強化 26）ダメージを与える。 これで敵を倒したら、花びら+3。">
   <div class="noart">絵なし</div>
   <div class="info">
@@ -260,6 +284,14 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="fx">次の落椿のあと、蕾にならずに、花びら5枚ですぐに開花する。<br>廃棄。</p>
   </div>
 </article>
+<article class="card" data-rarity="rare" data-type="skill" data-name="千年の種せんねんのたね" data-text="苗床：千年椿 廃棄。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>千年の種<span class="yomi">せんねんのたね</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 2<span class="up">（強化 1）</span></span></p>
+    <p class="fx">苗床：千年椿<br>廃棄。</p>
+  </div>
+</article>
 <article class="card" data-rarity="rare" data-type="skill" data-name="花冷えはなびえ" data-text="開花中のみ使える。 20（強化 26）ブロックを得て、落椿を起こす。">
   <div class="noart">絵なし</div>
   <div class="info">
@@ -291,8 +323,80 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 1</span></p>
     <p class="fx">落椿のたび、次のターンに1エナジーを得て、カードを2<span class="up">（強化 3）</span>枚多く引く。</p>
   </div>
+</article></div></section><section class="sec" data-sec="nursery"><h2>苗床のカード（8枚）</h2><div class="list">
+<article class="card" data-rarity="nursery" data-type="skill" data-name="椿の苗（芽）つばきのなえ（め）" data-text="5ブロックを得る。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>椿の苗（芽）<span class="yomi">つばきのなえ（め）</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">5ブロックを得る。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="skill" data-name="椿の苗（花）つばきのなえ（はな）" data-text="7ブロックを得る。 蕾なら、花びら5枚で開花する。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>椿の苗（花）<span class="yomi">つばきのなえ（はな）</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">7ブロックを得る。<br>蕾なら、花びら5枚で開花する。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="attack" data-name="棘の苗（芽）とげのなえ（め）" data-text="ランダムな敵に5ダメージを与える。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>棘の苗（芽）<span class="yomi">とげのなえ（め）</span></h3>
+    <p class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></p>
+    <p class="fx">ランダムな敵に5ダメージを与える。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="attack" data-name="棘の苗（花）とげのなえ（はな）" data-text="敵全体に6ダメージを与える。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>棘の苗（花）<span class="yomi">とげのなえ（はな）</span></h3>
+    <p class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></p>
+    <p class="fx">敵全体に6ダメージを与える。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="skill" data-name="椿の実（芽）つばきのみ（め）" data-text="カードを1枚引く。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>椿の実（芽）<span class="yomi">つばきのみ（め）</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 0</span></p>
+    <p class="fx">カードを1枚引く。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="skill" data-name="椿の実（花）つばきのみ（はな）" data-text="1エナジーを得る。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>椿の実（花）<span class="yomi">つばきのみ（はな）</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 0</span></p>
+    <p class="fx">1エナジーを得る。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="attack" data-name="千年椿（芽）せんねんつばき（め）" data-text="敵全体に7ダメージを与える。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>千年椿（芽）<span class="yomi">せんねんつばき（め）</span></h3>
+    <p class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 2</span></p>
+    <p class="fx">敵全体に7ダメージを与える。</p>
+  </div>
+</article>
+<article class="card" data-rarity="nursery" data-type="attack" data-name="千年椿（花）せんねんつばき（はな）" data-text="敵全体に15ダメージを与える。 花びら5枚で開花する（開花中なら花びら+5）。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>千年椿（花）<span class="yomi">せんねんつばき（はな）</span></h3>
+    <p class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 2</span></p>
+    <p class="fx">敵全体に15ダメージを与える。<br>花びら5枚で開花する（開花中なら花びら+5）。</p>
+  </div>
+</article></div></section><section class="sec" data-sec="status"><h2>状態異常（1枚）</h2><div class="list">
+<article class="card" data-rarity="status" data-type="status" data-name="朽ち花くちばな" data-text="使えない。">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>朽ち花<span class="yomi">くちばな</span></h3>
+    <p class="meta"><span class="tag t-status">状態異常</span></p>
+    <p class="fx">使えない。</p>
+  </div>
 </article></div></section>
-<p class="foot">絵が見つからないカード：ストライク、防御、花鋏、蔓打ち、花吹雪、剪定、葉隠れ、水やり、椿の香、根を張る、満開、根突き、締め蔓、芽吹き、狂い咲き、棘、寒椿、根回し、散り支度、首落とし、千本蔓、落椿、花散らし、返り咲き、花冷え、八重咲き、紅椿、散り際</p>
+<p class="foot">絵が見つからないカード：ストライク、防御、花鋏、蔓打ち、花吹雪、剪定、葉隠れ、水やり、椿の香、根を張る、種まき、種飛ばし、満開、根突き、締め蔓、芽吹き、狂い咲き、実り待ち、棘、寒椿、根回し、散り支度、首落とし、千本蔓、落椿、花散らし、返り咲き、千年の種、花冷え、八重咲き、紅椿、散り際、椿の苗（芽）、椿の苗（花）、棘の苗（芽）、棘の苗（花）、椿の実（芽）、椿の実（花）、千年椿（芽）、千年椿（花）、朽ち花</p>
 </div>
 <script>
 (function(){
