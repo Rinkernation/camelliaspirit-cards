@@ -89,7 +89,7 @@ dialog::backdrop{background:rgb(0 0 0/.75)}
   <span class="tname">防御</span>
   <span class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></span>
 </button></div></section><section class="sec" data-sec="token"><h2>試し用（1枚）</h2><div class="grid">
-<button type="button" class="card tile" data-rarity="token" data-type="attack" data-name="落椿おちつばき" data-text="開花中のみ使える。 落椿を起こす（敵全体に10ダメージ）。残りの花びら1枚ごとに、さらに3（強化 4）ダメージ。" data-i="2">
+<button type="button" class="card tile" data-rarity="token" data-type="attack" data-name="落椿おちつばき" data-text="開花中のみ使える。 落椿を起こし、敵全体に「残りの花びら×3（強化 4）」ダメージを与える。" data-i="2">
   <div class="noart">絵なし</div>
   <span class="tname">落椿</span>
   <span class="meta"><span class="tag t-attack">アタック</span><span class="tag">コスト 1</span></span>
@@ -104,7 +104,7 @@ dialog::backdrop{background:rgb(0 0 0/.75)}
   </div>
 </dialog>
 <script>
-var CARDS=[{"name":"ストライク","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"6\u003cspan class=\"up\">（強化 9）\u003c/span>ダメージを与える。","tall":false},{"name":"防御","big":"","meta":"\u003cspan class=\"tag t-skill\">スキル\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"5\u003cspan class=\"up\">（強化 8）\u003c/span>ブロックを得る。","tall":false},{"name":"落椿","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">試し用\u003c/span>","fx":"開花中のみ使える。\u003cbr>落椿を起こす（敵全体に10ダメージ）。残りの花びら1枚ごとに、さらに3\u003cspan class=\"up\">（強化 4）\u003c/span>ダメージ。","tall":false}];
+var CARDS=[{"name":"ストライク","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"6\u003cspan class=\"up\">（強化 9）\u003c/span>ダメージを与える。","tall":false},{"name":"防御","big":"","meta":"\u003cspan class=\"tag t-skill\">スキル\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">初期デッキに5枚\u003c/span>\u003cspan class=\"note\">基本\u003c/span>","fx":"5\u003cspan class=\"up\">（強化 8）\u003c/span>ブロックを得る。","tall":false},{"name":"落椿","big":"","meta":"\u003cspan class=\"tag t-attack\">アタック\u003c/span>\u003cspan class=\"tag\">コスト 1\u003c/span>\u003cspan class=\"note\">試し用\u003c/span>","fx":"開花中のみ使える。\u003cbr>落椿を起こし、敵全体に「残りの花びら×3\u003cspan class=\"up\">（強化 4）\u003c/span>」ダメージを与える。","tall":false}];
 (function(){
   var st={r:"all",t:"all",q:""};
   var cards=[].slice.call(document.querySelectorAll(".card"));
