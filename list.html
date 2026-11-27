@@ -58,7 +58,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 <body>
 <div class="wrap">
 <div class="top">
-  <div><h1>椿の精 カード帳</h1><p class="lead">Slay the Spire 2 MOD v0.0.1・全87枚・2026-11-27 更新</p></div>
+  <div><h1>椿の精 カード帳</h1><p class="lead">Slay the Spire 2 MOD v0.6.1・全89枚・2026-11-27 更新</p></div>
   <nav class="pages" aria-label="ページ"><a href="./">並べて見る</a><a href="list.html" aria-current="page">詳細</a></nav>
 </div>
 <nav class="bar" aria-label="絞り込み">
@@ -349,7 +349,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </div>
 </article>
 <article class="card" data-rarity="uncommon" data-type="power" data-name="根回しねまわし" data-text="落椿のたび、次のターンにカードを2（強化 3）枚多く引く。">
-  <img src="img/nemawashi.png" alt="" loading="lazy" width="250" height="190">
+  <div class="noart">絵なし</div>
   <div class="info">
     <h3>根回し<span class="yomi">ねまわし</span></h3>
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 1</span></p>
@@ -453,7 +453,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </div>
 </article>
 <article class="card" data-rarity="uncommon" data-type="power" data-name="実生みしょう" data-text="自分のターン開始時、苗床にランダムな苗を1本植える。">
-  <img src="img/mishou.png" alt="" loading="lazy" width="250" height="190">
+  <div class="noart">絵なし</div>
   <div class="info">
     <h3>実生<span class="yomi">みしょう</span></h3>
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 2<span class="up">（強化 1）</span></span></p>
@@ -589,7 +589,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
   </div>
 </article>
 <article class="card" data-rarity="rare" data-type="power" data-name="年輪ねんりん" data-text="落椿のたび、筋力+1。">
-  <img src="img/nenrin.png" alt="" loading="lazy" width="250" height="190">
+  <div class="noart">絵なし</div>
   <div class="info">
     <h3>年輪<span class="yomi">ねんりん</span></h3>
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 2<span class="up">（強化 1）</span></span></p>
@@ -610,6 +610,22 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <h3>陽だまり<span class="yomi">ひだまり</span></h3>
     <p class="meta"><span class="tag t-power">パワー</span><span class="tag">コスト 2</span></p>
     <p class="fx">自分のターン開始時、花びらが3<span class="up">（強化 2）</span>枚以上あれば、1エナジーを得る。</p>
+  </div>
+</article></div></section><section class="sec" data-sec="ancient"><h2>エンシェント（2枚）</h2><div class="list">
+<article class="card" data-rarity="ancient" data-type="skill" data-name="豊作ほうさく" data-text="8（強化 11）ブロックを得る。 苗床：椿、山吹、山茶花 苗床の苗をすべて1段階育てる。 （種まきが「古びた歯」で変化するカード）">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>豊作<span class="yomi">ほうさく</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">8<span class="up">（強化 11）</span>ブロックを得る。<br>苗床：椿、山吹、山茶花<br>苗床の苗をすべて1段階育てる。<br>（種まきが「古びた歯」で変化するカード）</p>
+  </div>
+</article>
+<article class="card" data-rarity="ancient" data-type="skill" data-name="大宿木おおやどりぎ" data-text="宿木31（強化 38）を植える。 天賦。 （「埃まみれの書」で手に入るカード）">
+  <div class="noart">絵なし</div>
+  <div class="info">
+    <h3>大宿木<span class="yomi">おおやどりぎ</span></h3>
+    <p class="meta"><span class="tag t-skill">スキル</span><span class="tag">コスト 1</span></p>
+    <p class="fx">宿木31<span class="up">（強化 38）</span>を植える。<br>天賦。<br>（「埃まみれの書」で手に入るカード）</p>
   </div>
 </article></div></section><section class="sec" data-sec="nursery"><h2>苗床のカード（18枚）</h2><div class="list">
 <article class="card" data-rarity="nursery" data-type="skill" data-name="椿（種）つばき（たね）" data-text="使えない。自分のターン開始時に芽になる。">
@@ -764,7 +780,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
     <p class="fx">使えない。</p>
   </div>
 </article></div></section>
-<p class="foot"></p>
+<p class="foot">絵が見つからないカード：根回し、実生、年輪、豊作、大宿木</p>
 </div>
 <script>
 (function(){
